@@ -1,0 +1,23 @@
+.emojis {
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+#copy {
+    margin: auto;
+    background-color: aquamarine;
+    display: none;
+    text-align: center;
+    width: 30vw;
+}
+#comment {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 400px;
+    margin: auto;
+    margin-top: 5vh;
+    display: none;
+
+}
+
