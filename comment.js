@@ -18,18 +18,15 @@ p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　�
 　　　　.　　　　✦　　　⠀p
 　　　　　　✦　　　　　p`
 
-    let emojis = document.getElementById("emojis").value;
-    let splitter = new GraphemeSplitter();
-    let graphemes = splitter.splitGraphemes(emojis)
-    graphemes = graphemes.filter(function(entry) { return entry.trim() != ''; });
-    //let emojis = document.getElementById("emojis").value.split('');
-    //let graphemes  = Array.from(emojis);
-    console.log(graphemes);
-    console.log(graphemes.length);
+    let emoji1 = document.getElementById("emoji1").value;
+    let emoji2 = document.getElementById("emoji2").value;
+    let emoji3 = document.getElementById("emoji3").value;
     let comment = template;
+    let emojis = [emoji1, emoji2, emoji3];
+    console.log(emojis);
     while (comment.includes('p')) {
-        let grapheme = graphemes[Math.floor(Math.random() * graphemes.length)];
-        comment = comment.replace('p', grapheme)
+        let emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        comment = comment.replace('p', emoji)
     }
 
     //let comment = template.replace(/p/g, emoji)
