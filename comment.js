@@ -21,7 +21,7 @@ p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　�
     let emojis = document.getElementById("emojis").value;
     let splitter = new GraphemeSplitter();
     let graphemes = splitter.splitGraphemes(emojis)
-    graphemes = graphemes.filter(entry => entry.trim() != '');
+    graphemes = graphemes.filter(function(entry) { return entry.trim() != ''; });
     //let emojis = document.getElementById("emojis").value.split('');
     //let graphemes  = Array.from(emojis);
     console.log(graphemes);
