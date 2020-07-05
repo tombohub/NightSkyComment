@@ -34,12 +34,12 @@ p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　�
     document.getElementById("comment").style.display = "block";
 
     //copy comment to clipboard
-    // var textArea = document.createElement("textarea");
-    // textArea.value = comment;
-    // document.body.appendChild(textArea);
-    // textArea.select();
-    // document.execCommand("Copy");
-    // textArea.remove();
+    var textArea = document.createElement("textarea");
+    textArea.value = comment;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("Copy");
+    textArea.remove();
 
     // show copied to clipboard message
     document.getElementById("copy").style.display = "block";
