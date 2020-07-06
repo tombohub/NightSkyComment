@@ -5,7 +5,7 @@ function makeComment() {
     let template = `p⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ ⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀
 .　　　　　　　　　　✦ ⠀⠀⠀p⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
 p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　
-p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.
+, 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p
 　　　　　　*　　　　　　　　　　　.
 .　　　　　　　　　　　　　. 　　✦⠀　   　　　p　　　　　　　　　*
@@ -29,9 +29,12 @@ p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　�
         comment = comment.replace('p', emoji)
     }
 
-    //let comment = template.replace(/p/g, emoji)
     document.getElementById("comment").innerHTML = comment ;
-    document.getElementById("comment").style.display = "block";
+    let comment_div = document.querySelector('#comment');
+    comment_div.classList.remove('d-none');
+
+    // leave for custom css instead of bootstrap
+    //document.getElementById("comment").style.display = "block";
 
     //copy comment to clipboard
     var textArea = document.createElement("textarea");
@@ -42,7 +45,8 @@ p 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　�
     textArea.remove();
 
     // show copied to clipboard message
-    document.getElementById("copy").style.display = "block";
+    document.querySelector('#copy').classList.remove('d-none')
+    //document.getElementById("copy").style.display = "block";
 
     return false;
 

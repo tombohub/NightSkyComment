@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
     <script type="text/javascript" src="comment.js"></script>
     <title>Night Sky Comment</title>
 </head>
-<body>
+<body class="text-center bg-dark text-light">
+
     <form class="emojis" onsubmit="return makeComment()">
         <p>Type Emojis:<br>
             For best results type 3 emojis or LESS:
         <p>
-            <input type="text" id="emoji1" maxlength="8" size="1" autofocus>
-            <input type="text" id="emoji2" maxlength="8" size="1">
-            <input type="text" id="emoji3" maxlength="8" size="1">
+            <input type="text" id="emoji1" maxlength="8" size="2" autofocus>
+            <input type="text" id="emoji2" maxlength="8" size="2">
+            <input type="text" id="emoji3" maxlength="8" size="2">
         </p>
+        <p><button type="submit" class="btn btn-primary">Go</button></p>
+    </form>
 
-        <p><button type="submit">Go</button></p>
+    <div id="copy" class="alert alert-success d-none">
+        Comment copied to clipboard!
+    </div>
+        
+    <div id="comment" class="w-50 m-auto border border-light rounded d-none"></div>
 
-
-        </form>
-<div id="copy">
-    Comment copied to clipboard!
-</div>
-    <div id="comment">
-
-</div>
 </body>
 </html>
