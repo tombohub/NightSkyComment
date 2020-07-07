@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
     <script type="text/javascript" src="comment.js" defer></script>
     <title>Night Sky Comment</title>
 </head>
-<body class="text-center bg-dark text-light">
+<body class="">
 
-    <div class="container">
+    <div class="">
 
         <form class="emojis" onsubmit="return makeComment()">
-            <p>Type Emojis:<br>
+            <div>Type Emojis:<br>
                 For best results type 3 emojis or LESS:
-            <div class="d-flex justify-content-around form-group">
-                <input type="text" id="emoji1" class="form-control w-25" maxlength="8" size="2" autofocus>
-                <input type="text" id="emoji2" class="form-control w-25" maxlength="8" size="2">
-                <input type="text" id="emoji3" class="form-control w-25" maxlength="8" size="2">
             </div>
-            <div><button type="submit" class="btn btn-primary" id="go_button">Go</button></div>
-            <div class="d-none" id="new_buttons">
-                <button type="submit" class="btn btn-primary">Shuffle</button>
-                <button type="button" class="btn btn-primary" onclick="window.location.reload()">New</button>
+            <div class="">
+                <input type="text" id="emoji1" class="" maxlength="8" size="2" autofocus>
+                <input type="text" id="emoji2" class="" maxlength="8" size="2">
+                <input type="text" id="emoji3" class="" maxlength="8" size="2">
+            </div>
+            <div><button type="submit" class="" id="go_button">Go</button></div>
+            <div class="" id="new_buttons">
+                <button type="submit" class="">Shuffle</button>
+                <button type="button" class="" onclick="window.location.href = window.location.href">New</button>
             </div>
         </form>
     
     
-        <div id="copy" class="alert alert-success d-none">
+        <div id="copy" class="">
             Comment copied to clipboard!
         </div>
             
-        <div id="comment" class="m-auto border border-light rounded d-none"></div>
+        <div id="comment" class=""></div>
     </div>
 
 </body>
