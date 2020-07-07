@@ -48,6 +48,10 @@ p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p �
     document.querySelector('#copy').classList.remove('d-none')
     //document.getElementById("copy").style.display = "block";
 
+    // show new buttons and hide original button
+    document.querySelector('#new_buttons').classList.remove('d-none');
+    document.querySelector('#go_button').classList.add('d-none');
+
     return false;
 
 }
