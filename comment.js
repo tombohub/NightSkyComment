@@ -65,6 +65,9 @@ p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p ⠀ ⠀⠀⠀⠀�
     document.querySelector('#new_buttons').style.display = 'block';
     document.querySelector('#go_button').style.display = 'none';
 
+    //show design reference
+    document.querySelector('small').style.display = 'block';
+
     return false;
 
 }

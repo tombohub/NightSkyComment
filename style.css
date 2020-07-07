@@ -23,6 +23,14 @@ div {
     margin: 1rem;
 }
 
+a {
+    color: var(--yellow-dark);
+}
+small {
+    text-align: center;
+    display: none;
+    font-size: 0.7rem;
+}
 .emojis {
     margin: auto;
     margin-top: 5vh;
