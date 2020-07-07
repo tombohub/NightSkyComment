@@ -34,6 +34,9 @@ div {
     padding: 0.5rem;
     border: 3px solid var(--yellow-dark)
 }
+.emojis input:focus {
+    background-color: var(--gold);
+}
 
 
 button {
