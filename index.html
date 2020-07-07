@@ -10,27 +10,30 @@
 </head>
 <body class="text-center bg-dark text-light">
 
-    <form class="emojis" onsubmit="return makeComment()">
-        <p>Type Emojis:<br>
-            For best results type 3 emojis or LESS:
-        <p>
-            <input type="text" id="emoji1" maxlength="8" size="2" autofocus>
-            <input type="text" id="emoji2" maxlength="8" size="2">
-            <input type="text" id="emoji3" maxlength="8" size="2">
-        </p>
-        <p><button type="submit" class="btn btn-primary" id="go_button">Go</button></p>
-        <div class="d-none" id="new_buttons">
-            <button type="submit" class="btn btn-primary">Shuffle</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.reload()">New</button>
+    <div class="container">
+
+        <form class="emojis" onsubmit="return makeComment()">
+            <p>Type Emojis:<br>
+                For best results type 3 emojis or LESS:
+            <p>
+                <input type="text" id="emoji1" maxlength="8" size="2" autofocus>
+                <input type="text" id="emoji2" maxlength="8" size="2">
+                <input type="text" id="emoji3" maxlength="8" size="2">
+            </p>
+            <p><button type="submit" class="btn btn-primary" id="go_button">Go</button></p>
+            <div class="d-none" id="new_buttons">
+                <button type="submit" class="btn btn-primary">Shuffle</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.reload()">New</button>
+            </div>
+        </form>
+    
+    
+        <div id="copy" class="alert alert-success d-none">
+            Comment copied to clipboard!
         </div>
-    </form>
-
-
-    <div id="copy" class="alert alert-success d-none">
-        Comment copied to clipboard!
+            
+        <div id="comment" class="m-auto border border-light rounded d-none"></div>
     </div>
-        
-    <div id="comment" class="w-50 m-auto border border-light rounded d-none"></div>
 
 </body>
 </html>
