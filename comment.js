@@ -58,16 +58,16 @@ p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p �
 
 
 // to focus and change focus on inputs after typing
-document.getElementById('emoji1').focus();
-
 const emoji1 = document.querySelector('#emoji1');
 const emoji2 = document.querySelector('#emoji2');
 const emoji3 = document.querySelector('#emoji3');
 
+emoji1.focus();
+emoji1.click();
 emoji1.addEventListener("input", function() { 
     emoji2.focus();
 });
 emoji2.addEventListener('input', function() {
     emoji3.focus();
 });
-
+emoji3.addEventListener('input', makeComment);

@@ -15,12 +15,12 @@
         <form class="emojis" onsubmit="return makeComment()">
             <p>Type Emojis:<br>
                 For best results type 3 emojis or LESS:
-            <p>
-                <input type="text" id="emoji1" maxlength="8" size="2" autofocus>
-                <input type="text" id="emoji2" maxlength="8" size="2">
-                <input type="text" id="emoji3" maxlength="8" size="2">
-            </p>
-            <p><button type="submit" class="btn btn-primary" id="go_button">Go</button></p>
+            <div class="d-flex justify-content-around form-group">
+                <input type="text" id="emoji1" class="form-control w-25" maxlength="8" size="2" autofocus>
+                <input type="text" id="emoji2" class="form-control w-25" maxlength="8" size="2">
+                <input type="text" id="emoji3" class="form-control w-25" maxlength="8" size="2">
+            </div>
+            <div><button type="submit" class="btn btn-primary" id="go_button">Go</button></div>
             <div class="d-none" id="new_buttons">
                 <button type="submit" class="btn btn-primary">Shuffle</button>
                 <button type="button" class="btn btn-primary" onclick="window.location.reload()">New</button>
