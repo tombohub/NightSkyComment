@@ -61,7 +61,6 @@ button:active {
     margin: auto;
     display: none;
     text-align: center;
-    width: 30vw;
 }
 
 #new_buttons {
@@ -75,7 +74,7 @@ button:active {
     margin: auto;
     margin-top: 5vh;
     display: none;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 
 }
 
