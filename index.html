@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
-    <script type="text/javascript" src="comment.js" defer></script>
+    <script type='module' src="comment.js" defer></script>
     <title>Night Sky Comment</title>
 </head>
 <body class="">
@@ -13,10 +13,10 @@
     <div class="">
 
         <form class="emojis" onsubmit="return makeComment()">
-            <div>Type Emojis, then Go!:<br>
-                For best results type 3 emojis or LESS:
+            <div id='intro'>Type Emojis, then Go!:<br>
+                For best results type 3 emojis or less:
             </div>
-            <div class="">
+            <div id='emojis'>
                 <input type="text" id="emoji1" class="" maxlength="8" size="2" autofocus>
                 <input type="text" id="emoji2" class="" maxlength="8" size="2">
                 <input type="text" id="emoji3" class="" maxlength="8" size="2">
@@ -36,9 +36,12 @@
         <div id="comment" class=""></div>
 
         <div>
-            <small>Design inspired from <a href="https://www.instagram.com/p/CCTnv7kpkMH/?utm_source=ig_web_button_share_sheet">photo</a>
-                and <a href="https://www.instagram.com/p/CCSkxieJP15/?utm_source=ig_web_button_share_sheet">photo</a>
-                by <a href="https://www.instagram.com/kimberlyjy/">@kimberlyjy</a>
+            <small>Design inspired from 
+                <a href="https://www.instagram.com/p/CCTnv7kpkMH/?utm_source=ig_web_button_share_sheet" target="_blank">moonrise cloud</a>
+                and 
+                <a target="_blank" href="https://www.instagram.com/p/CCSkxieJP15/?utm_source=ig_web_button_share_sheet">moonrise boat</a>
+                by 
+                <a target="_blank" href="https://www.instagram.com/kimberlyjy/">@kimberlyjy</a>
             </small>
         </div>
 
