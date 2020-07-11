@@ -1,7 +1,7 @@
 import GraphemeBreaker from 'https://taisukef.github.io/grapheme-breaker-mjs/src/GraphemeBreaker.mjs'
-console.log(GraphemeBreaker.break('😜🇺🇸👍'))
+console.log(GraphemeBreaker.break('👩‍🍳👮‍♀️🤦🏿‍♀️'))
 
-function makeComment() {
+function makeComment(event) {
 
     let template = `p⠀⠀⠀⠀⠀⠀.　　　　　　　　　⠀⠀⠀✦ ⠀ ⠀　　　　　　* ⠀⠀⠀
 .　　　　　　　　　　✦ ⠀⠀⠀p⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
@@ -20,10 +20,10 @@ p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p ⠀ ⠀⠀⠀⠀�
 　　　　　　✦　　　　　p`
 
     let emoji1 = document.getElementById("emoji1").value;
-    let emoji2 = document.getElementById("emoji2").value;
-    let emoji3 = document.getElementById("emoji3").value;
+    // let emoji2 = document.getElementById("emoji2").value;
+    // let emoji3 = document.getElementById("emoji3").value;
     let comment = template;
-    let emojis = [emoji1, emoji2, emoji3];
+    let emojis = GraphemeBreaker.break(emoji1);
     console.log(emojis);
     while (comment.includes('p')) {
         let emoji = emojis[Math.floor(Math.random() * emojis.length)];
@@ -59,22 +59,25 @@ p⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀p ⠀ ⠀⠀⠀⠀�
     //show design reference
     document.querySelector('small').style.display = 'block';
 
-    return false;
+   // return false;
+   event.preventDefault();
+
 
 }
 
+document.querySelector('form').addEventListener('submit', makeComment);
 
 // to focus and change focus on inputs after typing
-const emoji1 = document.querySelector('#emoji1');
-const emoji2 = document.querySelector('#emoji2');
-const emoji3 = document.querySelector('#emoji3');
+// const emoji1 = document.querySelector('#emoji1');
+// const emoji2 = document.querySelector('#emoji2');
+// const emoji3 = document.querySelector('#emoji3');
 
-emoji1.focus();
-emoji1.click();
-emoji1.addEventListener("input", function() { 
-    emoji2.focus();
-});
-emoji2.addEventListener('input', function() {
-    emoji3.focus();
-});
-emoji3.addEventListener('input', makeComment);
+// emoji1.focus();
+// emoji1.click();
+// emoji1.addEventListener("input", function() { 
+//     emoji2.focus();
+// });
+// emoji2.addEventListener('input', function() {
+//     emoji3.focus();
+// });
+// emoji3.addEventListener('input', makeComment);
