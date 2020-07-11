@@ -1,5 +1,5 @@
 import GraphemeBreaker from 'https://taisukef.github.io/grapheme-breaker-mjs/src/GraphemeBreaker.mjs'
-console.log(GraphemeBreaker.break('👩‍🍳👮‍♀️🤦🏿‍♀️'))
+//console.log(GraphemeBreaker.break('👩‍🍳👮‍♀️🤦🏿‍♀️'))
 
 function makeComment(event) {
 
